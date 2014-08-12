@@ -1,17 +1,15 @@
-# Node app base container
-#
-# Run container by executing following command:
-# $ docker run -t -i -v ${BASEPATH}:/www -p 80:80 -p 1337:1337 alexindigo/node-app <command>
-#
-# alexindigo/rendr-base
-FROM      alexindigo/node-dev
+# generic node based application
+# alexindigo/node-app
+FROM alexindigo/node-dev:0.10.29
 MAINTAINER Alex Indigo <iam@alexindigo.com>
 
 # Create workspace
 # And bind it to the site folder at runtime
-VOLUME    ["/www"]
-WORKDIR   /www
+VOLUME ["/www"]
+WORKDIR /www
 
-# Open ports
-EXPOSE    80
-EXPOSE    1337
+# expect webapp by default
+EXPOSE 80
+
+# autostart application
+CMD ["./autostart"]
