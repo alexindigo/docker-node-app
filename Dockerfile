@@ -1,6 +1,6 @@
 # generic node based application
 # alexindigo/node-app
-FROM alexindigo/node-dev:0.10.29
+FROM alexindigo/node-dev:0.12.0
 MAINTAINER Alex Indigo <iam@alexindigo.com>
 
 # Create workspace
