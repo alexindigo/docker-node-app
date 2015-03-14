@@ -3,6 +3,9 @@
 FROM alexindigo/node-dev:0.10.37
 MAINTAINER Alex Indigo <iam@alexindigo.com>
 
+# Install pm2 process manager
+npm install -g pm2
+
 # Create workspace
 # And bind it to the site folder at runtime
 VOLUME ["/www"]
